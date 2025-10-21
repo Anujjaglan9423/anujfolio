@@ -1,13 +1,14 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Header from "@/components/header"
-import Hero from "@/components/hero"
-import About from "@/components/about"
-import Skills from "@/components/skills"
-import Projects from "@/components/projects"
-import Contact from "@/components/contact"
-import Footer from "@/components/footer"
+import { motion } from "framer-motion";
+import Header from "@/components/header";
+import Hero from "@/components/hero";
+import About from "@/components/about";
+import Skills from "@/components/skills";
+import Projects from "@/components/projects";
+import Contact from "@/components/contact";
+import Footer from "@/components/footer";
+import Experience from "@/components/experience";
 
 export default function Home() {
   return (
@@ -20,10 +21,11 @@ export default function Home() {
       <Header />
       <Hero />
       <About />
+      <Experience />
       <Skills />
       <Projects />
       <Contact />
       <Footer />
     </motion.main>
-  )
+  );
 }
