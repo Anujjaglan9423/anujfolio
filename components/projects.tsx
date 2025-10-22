@@ -49,7 +49,7 @@ const projects = [
     description:
       "Digital transformation solution for port container clearance processes. Automates documentation, tracking, and approval workflows for efficient port operations and container management.",
     tags: ["React", "Tailwind CSS", "JavaScript", "REST API", "Formik"],
-    link: "#",
+    // link: "#",
     github: "#",
     type: "web",
     image: "/port.jpg",
@@ -59,7 +59,7 @@ const projects = [
     description:
       "End-to-end crop management system tracking from farm cultivation to market distribution. Manages crop growth, harvesting, warehouse storage, and supply chain logistics with comprehensive reporting.",
     tags: ["React", "Tailwind CSS", "JavaScript", "Chart.js", "CMS"],
-    link: "#",
+    // link: "#",
     github: "#",
     type: "web",
     image: "/crop.jpg",
@@ -79,7 +79,7 @@ const projects = [
     description:
       "Modern, responsive portfolio website showcasing my projects and skills. Features smooth animations, dark mode, and optimized performance with best practices.",
     tags: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Framer Motion"],
-    link: "#",
+    // link: "#",
     github: "#",
     type: "web",
     image: "/anuj.jpg",
@@ -167,18 +167,19 @@ export default function Projects() {
 
                 {/* Action Buttons */}
                 <div className="flex gap-3">
-                  <motion.a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors flex-1 justify-center"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    Live Demo
-                  </motion.a>
-
+                  {project.link && (
+                    <motion.a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors flex-1 justify-center"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      Live Demo
+                    </motion.a>
+                  )}
                   {project.github !== "#" && (
                     <motion.a
                       href={project.github}
