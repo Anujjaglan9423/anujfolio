@@ -5,6 +5,16 @@ import { ExternalLink, Github, Smartphone, Globe } from "lucide-react";
 
 const projects = [
   {
+    title: "CET TEST - Exam Preparation Platform",
+    description:
+      "India's #1 free mock test platform for competitive exams. Features include unlimited mock tests, detailed analytics, all-India rankings, Uttarakhand GK, and support for UKSSSC, UKPSC, and other state exams. Built for scalability and performance.",
+    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "SEO"],
+    link: "https://cettest.site/",
+    github: "#",
+    type: "web",
+    image: "/cettest-logo.jpeg",
+  },
+  {
     title: "Kipinn Business App",
     description:
       "A comprehensive property management mobile application for real estate businesses. Features include property listing, tenant management, rent collection, maintenance tracking, and financial reporting.",
@@ -132,11 +142,10 @@ export default function Projects() {
                 />
                 <div className="absolute top-4 right-4">
                   <span
-                    className={`px-3 py-1 rounded-full text-xs font-medium ${
-                      project.type === "mobile"
-                        ? "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200"
-                        : "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200"
-                    }`}
+                    className={`px-3 py-1 rounded-full text-xs font-medium ${project.type === "mobile"
+                      ? "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200"
+                      : "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200"
+                      }`}
                   >
                     {project.type === "mobile" ? "Mobile" : "Web"}
                   </span>
